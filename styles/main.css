@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 10px;
+}
+
+.hero {
+  position: relative;
+  background-repeat: no-repeat;
+}
+.hero-invert-filter {
+  display: none;
+}
+.hero-heading {
+  text-transform: uppercase;
+  font: 900 6.3rem/6rem "Big Shoulders Display", cursive;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (max-width: 574px) {
+  .hero-container {
+    width: 100%;
+    height: 61rem;
+    gap: 3rem;
+  }
+  .hero-container::before {
+    content: "";
+    background-image: url("../../assets/mobile/image-hero.jpg");
+    background-size: cover;
+    margin-bottom: 2rem;
+    width: 100%;
+    aspect-ratio: 1.6;
+  }
+}
+.hero-text {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+@media (min-width: 575px) {
+  .hero {
+    min-height: 72rem;
+    background-image: url(../../assets/tablet/image-hero.jpg);
+  }
+  .hero-container {
+    justify-content: center;
+    height: 72rem;
+    align-items: flex-end;
+  }
+  .hero-heading {
+    width: 60%;
+  }
+  .hero-text {
+    width: 50%;
+  }
+}/*# sourceMappingURL=main.css.map */

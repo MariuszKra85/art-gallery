@@ -1,0 +1,58 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/variables";
+
+.hero {
+  position: relative;
+
+  background-repeat: no-repeat;
+
+  &-invert-filter {
+    display: none;
+  }
+
+  &-heading {
+    text-transform: uppercase;
+    font: 900 6.3rem/6rem variables.$font-big-shoulders-display;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoints.media("<medium") {
+      &::before {
+        content: "";
+        background-image: url("../../assets/mobile/image-hero.jpg");
+        background-size: cover;
+        margin-bottom: 2rem;
+        width: 100%;
+        aspect-ratio: 1.6;
+      }
+      width: 100%;
+      height: 61rem;
+      gap: 3rem;
+    }
+  }
+  &-text {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  @include breakpoints.media(">=medium") {
+    min-height: 72rem;
+    background-image: url(../../assets/tablet/image-hero.jpg);
+
+    &-container {
+      justify-content: center;
+      height: 72rem;
+      align-items: flex-end;
+    }
+    &-heading {
+      width: 60%;
+    }
+    &-text {
+      width: 50%;
+    }
+  }
+}

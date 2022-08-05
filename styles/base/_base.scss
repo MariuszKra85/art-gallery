@@ -1,0 +1,6 @@
+@use "../abstracts/variables";
+
+html {
+  font-family: variables.$font-outfit;
+  font-size: 10px;
+}

@@ -1,0 +1,10 @@
+$transition-duration: 300ms;
+$transition-timing-function: ease;
+$transition-delay: calc($transition-duration / 2);
+
+$transition-default: $transition-duration $transition-timing-function;
+
+%transition {
+  transition: $transition-default;
+  transition-property: color, background-color, transform, fill;
+}
