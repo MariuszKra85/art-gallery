@@ -55,4 +55,52 @@
       width: 50%;
     }
   }
+  @include breakpoints.media(">=large") {
+    width: min(125rem, 100%);
+    height: 95rem;
+    background-image: url(../../assets/desktop/image-hero.jpg);
+    background-position: left 45rem center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &-container {
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-heading {
+      font-size: 10rem;
+      line-height: 9rem;
+      margin-top: 22rem;
+      margin-left: 18rem;
+
+      width: max-content;
+    }
+    &-text {
+      margin-top: 28rem;
+      width: 30%;
+    }
+
+    &-mobile {
+      width: 47rem;
+      margin-left: 18rem;
+      margin-top: 22rem;
+    }
+
+    &-invert-filter {
+      display: block;
+      background-color: rgb(255, 255, 255);
+      filter: invert(1);
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      height: 100%;
+      width: 45rem;
+
+      overflow: hidden;
+    }
+  }
 }

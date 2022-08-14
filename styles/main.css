@@ -65,7 +65,7 @@ html {
   flex-direction: column;
   gap: 2rem;
 }
-@media (max-width: 574px) {
+@media (max-width: 619px) {
   .hero-container {
     width: 100%;
     height: 61rem;
@@ -84,7 +84,7 @@ html {
   font-size: 2rem;
   line-height: 3rem;
 }
-@media (min-width: 575px) {
+@media (min-width: 620px) {
   .hero {
     min-height: 72rem;
     background-image: url(../../assets/tablet/image-hero.jpg);
@@ -99,5 +99,49 @@ html {
   }
   .hero-text {
     width: 50%;
+  }
+}
+@media (min-width: 950px) {
+  .hero {
+    width: min(125rem, 100%);
+    height: 95rem;
+    background-image: url(../../assets/desktop/image-hero.jpg);
+    background-position: left 45rem center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .hero-container {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hero-heading {
+    font-size: 10rem;
+    line-height: 9rem;
+    margin-top: 22rem;
+    margin-left: 18rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .hero-text {
+    margin-top: 28rem;
+    width: 30%;
+  }
+  .hero-mobile {
+    width: 47rem;
+    margin-left: 18rem;
+    margin-top: 22rem;
+  }
+  .hero-invert-filter {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    filter: invert(1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 45rem;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=main.css.map */
