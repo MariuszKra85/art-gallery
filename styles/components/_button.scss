@@ -1,0 +1,57 @@
+@use "../abstracts/variables";
+@use "../abstracts/animation";
+.btn {
+  cursor: pointer;
+
+  width: 100%;
+  max-width: 25rem;
+  height: 7rem;
+  color: variables.$color-almost-black--inverted;
+  padding: 0 2rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  font-family: variables.$font-big-shoulders-display;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+  background-color: variables.$color-almost-black;
+  &-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: 0 3rem;
+    height: 100%;
+    background-color: variables.$color-gold;
+  }
+  &:after {
+    content: "our location";
+    color: variables.$color-almost-black--inverted;
+    width: 100%;
+    max-width: 25rem;
+    padding: 0 2rem;
+    height: 100%;
+    transform: translateX(0);
+    @extend %transition;
+  }
+  &:hover {
+    &:after {
+      display: flex;
+      align-items: center;
+      transform: translateX(-132%);
+      background-color: variables.$color-gold;
+    }
+    .btn-arrow {
+      @extend %transition;
+      background-color: variables.$color-almost-black;
+    }
+  }
+}

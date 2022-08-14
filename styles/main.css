@@ -144,4 +144,57 @@ html {
     width: 45rem;
     overflow: hidden;
   }
+}
+
+.btn:after, .btn:hover .btn-arrow {
+  transition: 300ms ease;
+  transition-property: color, background-color, transform, fill;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  max-width: 25rem;
+  height: 7rem;
+  color: hsl(0deg, 0%, 92%);
+  padding: 0 2rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+  background-color: hsl(0deg, 0%, 8%);
+}
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  padding: 0 3rem;
+  height: 100%;
+  background-color: hsl(24deg, 56%, 63%);
+}
+.btn:after {
+  content: "our location";
+  color: hsl(0deg, 0%, 92%);
+  width: 100%;
+  max-width: 25rem;
+  padding: 0 2rem;
+  height: 100%;
+  transform: translateX(0);
+}
+.btn:hover:after {
+  display: flex;
+  align-items: center;
+  transform: translateX(-132%);
+  background-color: hsl(24deg, 56%, 63%);
+}
+.btn:hover .btn-arrow {
+  background-color: hsl(0deg, 0%, 8%);
 }/*# sourceMappingURL=main.css.map */
