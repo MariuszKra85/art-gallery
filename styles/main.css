@@ -158,6 +158,7 @@ html {
   height: 7rem;
   color: hsl(0deg, 0%, 92%);
   padding: 0 2rem;
+  margin-top: 2rem;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -197,4 +198,55 @@ html {
 }
 .btn:hover .btn-arrow {
   background-color: hsl(0deg, 0%, 8%);
+}
+
+.grid {
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.grid-item-wrapper {
+  width: 100%;
+}
+@media (min-width: 620px) {
+  .grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 10% 1fr;
+    grid-template-areas: "your-day one one" "two two three" "two two can-be";
+    gap: 2rem;
+  }
+}
+
+.text-heading {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 900;
+  font-size: 5rem;
+}
+.text-paragraph {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+.text-your-day {
+  grid-area: your-day;
+}
+.text-can-be {
+  grid-area: can-be;
+}
+
+.image-one {
+  grid-area: one;
+  content: url(../../assets/mobile/image-grid-1.jpg);
+}
+.image-two {
+  grid-area: two;
+  content: url(../../assets/mobile/image-grid-2.jpg);
+}
+.image-three {
+  grid-area: three;
+  content: url(../../assets/mobile/image-grid-3.jpg);
 }/*# sourceMappingURL=main.css.map */
