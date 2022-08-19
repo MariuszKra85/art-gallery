@@ -202,6 +202,7 @@ html {
 
 .grid {
   margin: 0 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -215,7 +216,7 @@ html {
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-columns: 1fr 10% 1fr;
-    grid-template-areas: "your-day one one" "two two three" "two two can-be";
+    grid-template-areas: "your-day one one" "two two three" "two two come-be" "two two come-be";
     gap: 2rem;
   }
 }
@@ -230,12 +231,14 @@ html {
 .text-paragraph {
   font-size: 1.6rem;
   padding: 1rem 0;
+  padding-right: 1rem;
 }
 .text-your-day {
   grid-area: your-day;
 }
-.text-can-be {
-  grid-area: can-be;
+.text-come-be {
+  grid-area: come-be;
+  padding-left: 2rem;
 }
 
 .image-one {
@@ -249,4 +252,41 @@ html {
 .image-three {
   grid-area: three;
   content: url(../../assets/mobile/image-grid-3.jpg);
+  height: 100%;
+}
+
+.inverted {
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 92%);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 92%);
+  padding-bottom: 5rem;
+}
+.footer-item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.footer-heading {
+  margin: 4rem;
+  font-size: 2.2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+.footer-text {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+.icon-wrapper {
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=main.css.map */

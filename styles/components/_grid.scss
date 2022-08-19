@@ -3,6 +3,7 @@
 
 .grid {
   margin: 0 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,7 +20,8 @@
     grid-template-areas:
       "your-day one one"
       "two two three"
-      "two two can-be";
+      "two two come-be"
+      "two two come-be";
     gap: 2rem;
   }
 }
@@ -36,12 +38,14 @@
   &-paragraph {
     font-size: 1.6rem;
     padding: 1rem 0;
+    padding-right: 1rem;
   }
   &-your-day {
     grid-area: your-day;
   }
-  &-can-be {
-    grid-area: can-be;
+  &-come-be {
+    grid-area: come-be;
+    padding-left: 2rem;
   }
 }
 
@@ -57,5 +61,10 @@
   &-three {
     grid-area: three;
     content: url(../../assets/mobile/image-grid-3.jpg);
+    height: 100%;
   }
+}
+.inverted {
+  background-color: variables.$color-almost-black;
+  color: variables.$color-almost-black--inverted;
 }
